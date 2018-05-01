@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBAAVLAvpKNUz8ms4VU2ZqXwHSkaF-Eo9w",
+            authDomain: "crime-app-82963.firebaseapp.com",
+            databaseURL: "https://crime-app-82963.firebaseio.com",
+            projectId: "crime-app-82963",
+            storageBucket: "",
+            messagingSenderId: "556646355861"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <title>Assignment # 24</title>
+</head>
+
+<body>
+
+    <div class="container dropdownBox">
+        <h2 id="header">Crime Tracking App</h2>
+        <br />
+        <br />
+        <fieldset class="dropbox">
+            <div class="dropdown">
+                Select Crime Here:
+                <br />
+                <br />
+                <select name="devices" class="btn btn-default dropdown-toggle  btn btn-info" id="crimeCategories" data-toggle="dropdown">
+                    <option value="Crime" class="dropdown-header">Select The Category Of Crime:</option>
+                </select>
+            </div>
+            <div class="dropdown">
+                Select Forces Here:
+                <br />
+                <select name="devices" class="btn btn-default dropdown-toggle  btn btn-info" id="forces" data-toggle="dropdown">
+                    <option value="Crime" class="dropdown-header">Select The Force Category:</option>
+                </select>
+            </div>
+            <br />
+            <button type="button" class="btn btn-danger" id="search" onClick="searchTheCrimeReport()">
+                <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+        </fieldset>
+        <div id="result"></div>
+    </div>
+    <br />
+
+    <table class="table table-bordered table-striped" id="table">
+        <thead>
+            <tr class="th">
+                <th>#</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>ID</th>
+                <!-- <th>Status</th> -->
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

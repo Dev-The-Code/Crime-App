@@ -1,0 +1,53 @@
+body, html {
+    background-image: url("images/crime 1.jpg");
+
+    height: 100%;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    font-family: 'unique',Georgia, 'Times New Roman', Times, serif;
+}
+@font-face{
+    font-family: 'unique';
+    src: url('font/unique.ttf');
+}
+#header{
+    color:#e8e305;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4em;
+}
+.dropdownBox{
+    text-align: center;
+
+}
+.dropbox{
+    width: 320px;
+    padding: 10px;
+    border: 1px groove;
+    margin: 0 auto;
+    background-color: #f9bb12; 
+}
+
+#table{
+    border: 1px solid black;
+    border-collapse: separate;
+    /* border-spacing: 10px; */
+    /* margin: auto; */
+    /* padding: 15px; */
+
+}
+.th{
+    color: #ff061bf7;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px; 
+    text-align: center;
+} 
+#tbody{
+    color: #ebbe1d;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px; 
+    text-align: justify;
+}
