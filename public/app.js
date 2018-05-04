@@ -7,7 +7,6 @@
 
 var categoriesEl = document.getElementById('crimeCategories');
 var forcesEl = document.getElementById('forces');
-var searchBtn = document.getElementById('search');
 var resultEl = document.getElementById('result');
 var tbodyEl = document.getElementById('tbody');
 var tableEl = document.getElementById('table');
@@ -45,8 +44,14 @@ function searchTheCrimeReport() {
 
     var forceRef = document.getElementById("forces");
     var strUserForce = forceRef.options[forceRef.selectedIndex].value;
+
+
     var crimeType = crimeRef.value;
     var force = forceRef.value;
+
+
+
+    // Crimes: https://data.police.uk/api/crimes-no-location?category=all-crime&force=leicestershire
 
     fetch(`https://data.police.uk/api/crimes-no-location?category=${crimeType}&force=${force}`)
         .then(res => res.json())
@@ -58,6 +63,7 @@ function crimes(myJson) {
 
     if (myJson.length !== 0) {
         for (var i = 0; i < myJson.length; i++) {
+            
             tableEl.style.visibility = 'visible';
             tbodyEl.innerHTML += `
                 <tr>
